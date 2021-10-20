@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Online_Shoping.Admin.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        *
+        {
+            box-sizing: border-box;
+        }
+        
+        body
+        {
+            font-family: cursive ,Helvetica, sans-serif;
+        }
+        
+        header
+        {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+        
+        nav
+        {
+            float: left;
+            width: 20%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul
+        {
+            list-style-type: none;
+            padding: 1;
+            display: block;
+        }
+        nav ul li:hover
+        {
+            background-color: white;
+            color: white;
+            padding:11px;
+        }
+        article
+        {
+            float: left;
+            padding: 20px;
+            width: 80%;
+            background-color: #f1f1f1;
+           
+        }
+        
+        section::after
+        {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        footer
+        {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        
+        @media (max-width: 600px)
+        {
+            nav, article
+            {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <header><h2>Online Shoping</h2> </header>
+        <section>
+  <nav>
+    <ul>
+      <li><a href="AddCategory.aspx" >Category</a></li>
+      <li><a href="AddItem.aspx">Item</a></li>
+      <li><a href="AddQuantity.aspx">Quantity</a></li>
+      <li><a href="#">Order</a></li>
+      <li><a href="#">View Paymet</a></li>
+      <li><a href="Reports.aspx">Reports</a></li>
+      <li><a href="#">Change Password</a></li>
+      <li><a href="Feedback.aspx">Feedback</a></li>
+      <li><a href="Login.aspx">Logout</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+  </article>
+</section>
+    </div>
+    </form>
+</body>
+</html>
